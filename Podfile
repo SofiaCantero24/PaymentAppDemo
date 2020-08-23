@@ -6,6 +6,7 @@ target 'PaymentsAppDemo' do
   use_frameworks!
 
   # Pods for PaymentsAppDemo
+  pod 'Moya'
 
   target 'PaymentsAppDemoTests' do
     inherit! :search_paths
