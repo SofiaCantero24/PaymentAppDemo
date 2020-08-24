@@ -8,12 +8,6 @@
 
 import UIKit
 
-enum PaymentsSteps: Int {
-    case paymentMethods
-    case cardIssuers
-    case installments
-}
-
 struct PaymentInfo {
     let imageURL: String
     let name: String
@@ -43,10 +37,27 @@ class PaymentsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
         viewModel.getPaymentMethods { [weak self] in
             self?.paymentTableView.reloadData()
+        }
+    }
+
+    private func setupTitle() {
+        paymentTitleLabel.text = viewModel.currentStepTitle
+        paymentTitleLabel.textColor = .darkGray
+    }
+
+    private func updateViewController() {
+        paymentTableView.reloadData()
+        setupTitle()
+    }
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        if viewModel.previousStep() {
+            updateViewController()
+        } else {
+            navigationController?.popViewController(animated: true)
         }
     }
 }
@@ -65,5 +76,11 @@ extension PaymentsViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.setupCell(withImageURL: paymentInfo.imageURL, andName: paymentInfo.name)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRowAt(index: indexPath) { [weak self] in
+            self?.updateViewController()
+        }
     }
 }

@@ -8,14 +8,38 @@
 
 import Foundation
 
+enum PaymentsSteps: Int {
+    case paymentMethods
+    case cardIssuers
+    case installments
+
+    var title: String {
+        switch self {
+        case .paymentMethods:
+            return Localizables.paymentMethodsTitle
+        case .cardIssuers:
+            return Localizables.cardIssuersTitle
+        case .installments:
+            return Localizables.installmentsTitle
+        }
+    }
+}
+
 class PaymentsViewModel {
     var paymentMethods = [PaymentMethod]()
     var cardIssuers = [CardIssuer]()
     var installments = [Installment]()
 
     private let amount: Float
-    private let currentStep: PaymentsSteps = .paymentMethods
     private let networkManager: NetworkManager
+
+    private var currentStep: PaymentsSteps = .paymentMethods
+    private var paymentMethodId = ""
+    private var cardIssuerId = ""
+
+    var currentStepTitle: String {
+        return currentStep.title
+    }
 
     init(amount: Float, networkManager: NetworkManager = .shared) {
         self.amount = amount
@@ -47,6 +71,45 @@ class PaymentsViewModel {
             guard let installmentsInfo = installments[safe: index.row] else { return nil }
             return PaymentInfo(imageURL: installmentsInfo.issuer.secureThumbnail,
                                name: installmentsInfo.payerCosts.first?.recommendedMessage ?? "")
+        }
+    }
+
+    func didSelectRowAt(index: IndexPath, completion: @escaping () -> Void) {
+        switch currentStep {
+        case .paymentMethods:
+            guard let paymentMethodId = paymentMethods[safe: index.row]?.id else { return }
+            self.paymentMethodId = paymentMethodId
+            getCardIssuers(paymentMethodId: paymentMethodId) {
+                self.currentStep = .cardIssuers
+                completion()
+            }
+        case .cardIssuers:
+            guard let cardIssuerId = cardIssuers[safe: index.row]?.id else { return }
+            self.cardIssuerId = cardIssuerId
+            getInstallments(paymentMethodId: paymentMethodId, issuerId: cardIssuerId) {
+                self.currentStep = .installments
+                completion()
+            }
+        case .installments:
+            //TODO - success view
+            break
+        }
+    }
+
+    /**
+     Update currentStep value with the previous one
+     - returns: true if there is a previous step, otherwise false
+     */
+    func previousStep() -> Bool {
+        switch currentStep {
+        case .paymentMethods:
+            return false
+        case .cardIssuers:
+            currentStep = .paymentMethods
+            return true
+        case .installments:
+            currentStep = .cardIssuers
+            return true
         }
     }
 }

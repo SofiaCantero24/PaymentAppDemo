@@ -50,12 +50,7 @@ class AmountViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupGestureRecognizer()
         setupKeyboardNotifications()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    
-        navigationController?.setToolbarHidden(true, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     // MARK: - Private

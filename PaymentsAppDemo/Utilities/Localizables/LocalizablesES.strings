@@ -9,3 +9,6 @@
 "NextStepButtonTitle" = "Siguiente";
 "AmountTitle" = "GEOPAGOS";
 "AmountSubtitle" = "Ingresa el monto a cobrar";
+"PaymentMethodsTitle" = "Métodos de Pago";
+"CardIssuersTitle" = "Banco Emisor";
+"InstallmentsTitle" = "Número de cuotas";
