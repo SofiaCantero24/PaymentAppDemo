@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="paymentTableView" destination="52j-29-gw1" id="Kat-eJ-heT"/>
                 <outlet property="paymentTitleLabel" destination="spU-7X-P8y" id="tf4-Jq-NxO"/>
+                <outlet property="stepsContainerView" destination="aKR-x8-iFm" id="mxn-et-t0I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,52 +35,38 @@
                                 <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="fhf-E3-Ec5"/>
                             </connections>
                         </button>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z2o-f6-nn3">
-                            <rect key="frame" x="16" y="92" width="382" height="6"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwB-2Z-YAY">
-                                    <rect key="frame" x="0.0" y="0.0" width="120.5" height="6"/>
-                                    <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGH-jG-ISC">
-                                    <rect key="frame" x="130.5" y="0.0" width="121" height="6"/>
-                                    <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPN-rW-xxW">
-                                    <rect key="frame" x="261.5" y="0.0" width="120.5" height="6"/>
-                                    <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </view>
-                            </subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKR-x8-iFm">
+                            <rect key="frame" x="16" y="92" width="382" height="4"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="6" id="Rrj-CS-2VK"/>
+                                <constraint firstAttribute="height" constant="4" id="qdU-3s-xKs"/>
                             </constraints>
-                        </stackView>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Métodos de pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spU-7X-P8y">
-                            <rect key="frame" x="16" y="114" width="188.5" height="30"/>
+                            <rect key="frame" x="16" y="112" width="188.5" height="30"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="52j-29-gw1">
-                            <rect key="frame" x="0.0" y="160" width="414" height="658"/>
+                            <rect key="frame" x="0.0" y="158" width="414" height="660"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstItem="spU-7X-P8y" firstAttribute="top" secondItem="aKR-x8-iFm" secondAttribute="bottom" constant="16" id="61I-Yu-YHE"/>
                         <constraint firstItem="gAb-PV-Niw" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="Bo2-4B-LkV"/>
-                        <constraint firstItem="z2o-f6-nn3" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="E8Q-AS-Wbn"/>
-                        <constraint firstItem="z2o-f6-nn3" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="LDW-AZ-4OL"/>
                         <constraint firstItem="spU-7X-P8y" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="OpK-jE-0Eo"/>
                         <constraint firstItem="52j-29-gw1" firstAttribute="top" secondItem="spU-7X-P8y" secondAttribute="bottom" constant="16" id="W2s-op-hvr"/>
-                        <constraint firstItem="spU-7X-P8y" firstAttribute="top" secondItem="z2o-f6-nn3" secondAttribute="bottom" constant="16" id="Xjg-S2-6Y9"/>
+                        <constraint firstAttribute="trailing" secondItem="aKR-x8-iFm" secondAttribute="trailing" constant="16" id="XbF-CZ-mL4"/>
                         <constraint firstAttribute="bottom" secondItem="52j-29-gw1" secondAttribute="bottom" id="Z2M-fP-0bQ"/>
-                        <constraint firstItem="z2o-f6-nn3" firstAttribute="top" secondItem="gAb-PV-Niw" secondAttribute="bottom" constant="32" id="dpv-4f-vGg"/>
                         <constraint firstItem="spU-7X-P8y" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="gcN-dQ-A9V"/>
-                        <constraint firstAttribute="trailing" secondItem="z2o-f6-nn3" secondAttribute="trailing" constant="16" id="hYF-XS-Bvm"/>
                         <constraint firstAttribute="trailing" secondItem="52j-29-gw1" secondAttribute="trailing" id="poC-RQ-PqU"/>
                         <constraint firstItem="52j-29-gw1" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" id="sCk-pF-pIG"/>
                         <constraint firstItem="gAb-PV-Niw" firstAttribute="top" secondItem="bAw-MU-WbK" secondAttribute="top" constant="16" id="sqd-VB-DSI"/>
+                        <constraint firstItem="aKR-x8-iFm" firstAttribute="top" secondItem="gAb-PV-Niw" secondAttribute="bottom" constant="32" id="tsC-EW-jSJ"/>
+                        <constraint firstItem="aKR-x8-iFm" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="vh9-f8-7pI"/>
                     </constraints>
                 </view>
             </subviews>

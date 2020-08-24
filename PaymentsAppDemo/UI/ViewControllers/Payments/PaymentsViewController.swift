@@ -14,6 +14,13 @@ struct PaymentInfo {
 }
 
 class PaymentsViewController: UIViewController {
+    @IBOutlet weak private var stepsContainerView: UIView! {
+        didSet {
+//            let stepView: StepsUIView = StepsUIView.loadFirstSubViewFromNib() as! StepsUIView
+//            stepsContainerView.addSubview(stepView)
+//            stepView.frame = stepsContainerView.bounds
+        }
+    }
     @IBOutlet weak private var paymentTitleLabel: UILabel!
     @IBOutlet weak private var paymentTableView: UITableView! {
         didSet {
@@ -79,8 +86,13 @@ extension PaymentsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.didSelectRowAt(index: indexPath) { [weak self] in
-            self?.updateViewController()
+        viewModel.didSelectRowAt(index: indexPath) { [weak self] successView in
+            if successView {
+                let successView: SuccessViewController = SuccessViewController.loadFromNib()
+                self?.navigationController?.pushViewController(successView, animated: true)
+            } else {
+                self?.updateViewController()
+            }
         }
     }
 }

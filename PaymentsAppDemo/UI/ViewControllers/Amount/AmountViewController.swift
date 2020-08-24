@@ -78,15 +78,19 @@ class AmountViewController: UIViewController {
             NSValue)?.cgRectValue else {
            return
         }
+        view.layoutIfNeeded()
         UIView.animate(withDuration: 0.5) {
             self.buttonBottomConstraint.constant = 16 + keyboardSize.height
+            self.view.layoutIfNeeded()
         }
     }
 
     @objc
     private func keyboardWillHide(notification: NSNotification) {
+        view.layoutIfNeeded()
         UIView.animate(withDuration: 0.5) {
             self.buttonBottomConstraint.constant = 16
+            self.view.layoutIfNeeded()
         }
     }
 

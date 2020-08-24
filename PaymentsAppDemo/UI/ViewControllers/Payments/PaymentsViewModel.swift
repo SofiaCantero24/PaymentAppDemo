@@ -74,24 +74,24 @@ class PaymentsViewModel {
         }
     }
 
-    func didSelectRowAt(index: IndexPath, completion: @escaping () -> Void) {
+    func didSelectRowAt(index: IndexPath, completion: @escaping (Bool) -> Void) {
         switch currentStep {
         case .paymentMethods:
             guard let paymentMethodId = paymentMethods[safe: index.row]?.id else { return }
             self.paymentMethodId = paymentMethodId
             getCardIssuers(paymentMethodId: paymentMethodId) {
                 self.currentStep = .cardIssuers
-                completion()
+                completion(false)
             }
         case .cardIssuers:
             guard let cardIssuerId = cardIssuers[safe: index.row]?.id else { return }
             self.cardIssuerId = cardIssuerId
             getInstallments(paymentMethodId: paymentMethodId, issuerId: cardIssuerId) {
                 self.currentStep = .installments
-                completion()
+                completion(false)
             }
         case .installments:
-            //TODO - success view
+            completion(true)
             break
         }
     }
