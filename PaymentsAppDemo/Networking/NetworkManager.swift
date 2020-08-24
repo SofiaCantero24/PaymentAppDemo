@@ -19,7 +19,7 @@ protocol Networkable {
                         failure: NetworkFailureBlock?)
     func getInstallments(paymentMethodId: String,
                          issuerId: String,
-                         amount: Int,
+                         amount: Float,
                          success: @escaping NetworkSuccessBlock<[Installment]>,
                          failure: NetworkFailureBlock?)
 }
@@ -45,7 +45,7 @@ class NetworkManager: BaseNetwork, Networkable {
     
     func getInstallments(paymentMethodId: String,
                          issuerId: String,
-                         amount: Int,
+                         amount: Float,
                          success: @escaping NetworkSuccessBlock<[Installment]>,
                          failure: NetworkFailureBlock?) {
         provider.request(.installments(paymentMethodId: paymentMethodId,

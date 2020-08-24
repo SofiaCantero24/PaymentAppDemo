@@ -14,7 +14,7 @@ public enum PaymentsAPI {
 
     case paymentMethods
     case cardIssuers(paymentMethodId: String)
-    case installments(paymentMethodId: String, issuerId: String, amount: Int)
+    case installments(paymentMethodId: String, issuerId: String, amount: Float)
 }
 
 extension PaymentsAPI: TargetType {

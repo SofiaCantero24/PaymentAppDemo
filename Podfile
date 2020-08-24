@@ -7,6 +7,7 @@ target 'PaymentsAppDemo' do
 
   # Pods for PaymentsAppDemo
   pod 'Moya'
+  pod 'Kingfisher'
 
   target 'PaymentsAppDemoTests' do
     inherit! :search_paths
