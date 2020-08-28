@@ -117,7 +117,7 @@ class AmountViewController: BaseViewController {
         let paymentsViewModel = PaymentsViewModel(amount: viewModel.stringToFloat(textFieldText))
         let paymentsViewController = PaymentsViewController(viewModel: paymentsViewModel)
         let navigationController = UINavigationController(rootViewController: paymentsViewController)
-
+        navigationController.modalPresentationStyle = .fullScreen
         present(navigationController, animated: true, completion: nil)
     }
 }

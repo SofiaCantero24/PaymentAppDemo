@@ -20,4 +20,5 @@ struct Localizables {
     static var amountZeroAlertMessage: String { return "AmountZeroAlertMessage".localizable }
     static var paymentsEmptyTitle: String { return "PaymentsEmptyTitle".localizable }
     static var paymentsEmptyMessage: String { return "PaymentsEmptyMessage".localizable }
+    static var closeButtonTitle: String { return "CloseButtonTitle".localizable }
 }

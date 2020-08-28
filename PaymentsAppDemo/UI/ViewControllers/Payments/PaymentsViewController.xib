@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentsViewController" customModule="PaymentsAppDemo" customModuleProvider="target">
             <connections>
+                <outlet property="closeButton" destination="d3d-yW-57q" id="ylC-PF-tie"/>
                 <outlet property="paymentTableView" destination="52j-29-gw1" id="Kat-eJ-heT"/>
                 <outlet property="paymentTitleLabel" destination="spU-7X-P8y" id="tf4-Jq-NxO"/>
                 <outlet property="stepsContainerView" destination="aKR-x8-iFm" id="mxn-et-t0I"/>
@@ -52,12 +53,23 @@
                             <rect key="frame" x="0.0" y="158" width="414" height="660"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3d-yW-57q">
+                            <rect key="frame" x="338" y="19" width="60" height="38"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                            <state key="normal" title="Cerrar">
+                                <color key="titleColor" red="0.33333333329999998" green="0.72941176470000002" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="8o6-Kz-WxR"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstItem="spU-7X-P8y" firstAttribute="top" secondItem="aKR-x8-iFm" secondAttribute="bottom" constant="16" id="61I-Yu-YHE"/>
                         <constraint firstItem="gAb-PV-Niw" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="Bo2-4B-LkV"/>
                         <constraint firstItem="spU-7X-P8y" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="OpK-jE-0Eo"/>
+                        <constraint firstAttribute="trailing" secondItem="d3d-yW-57q" secondAttribute="trailing" constant="16" id="QbL-qp-pWn"/>
                         <constraint firstItem="52j-29-gw1" firstAttribute="top" secondItem="spU-7X-P8y" secondAttribute="bottom" constant="16" id="W2s-op-hvr"/>
                         <constraint firstAttribute="trailing" secondItem="aKR-x8-iFm" secondAttribute="trailing" constant="16" id="XbF-CZ-mL4"/>
                         <constraint firstAttribute="bottom" secondItem="52j-29-gw1" secondAttribute="bottom" id="Z2M-fP-0bQ"/>
@@ -67,6 +79,7 @@
                         <constraint firstItem="gAb-PV-Niw" firstAttribute="top" secondItem="bAw-MU-WbK" secondAttribute="top" constant="16" id="sqd-VB-DSI"/>
                         <constraint firstItem="aKR-x8-iFm" firstAttribute="top" secondItem="gAb-PV-Niw" secondAttribute="bottom" constant="32" id="tsC-EW-jSJ"/>
                         <constraint firstItem="aKR-x8-iFm" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="vh9-f8-7pI"/>
+                        <constraint firstItem="d3d-yW-57q" firstAttribute="centerY" secondItem="gAb-PV-Niw" secondAttribute="centerY" id="wXe-48-dcp"/>
                     </constraints>
                 </view>
             </subviews>

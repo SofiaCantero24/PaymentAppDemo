@@ -14,6 +14,11 @@ struct PaymentInfo {
 }
 
 class PaymentsViewController: BaseViewController {
+    @IBOutlet weak var closeButton: UIButton! {
+        didSet {
+            closeButton.setTitle(Localizables.closeButtonTitle, for: .normal)
+        }
+    }
     @IBOutlet weak private var stepsContainerView: UIView! {
         didSet {
 //            let stepView: StepsUIView = StepsUIView.loadFirstSubViewFromNib() as! StepsUIView
@@ -75,6 +80,10 @@ class PaymentsViewController: BaseViewController {
         } else {
             dismiss(animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func closeButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }
 

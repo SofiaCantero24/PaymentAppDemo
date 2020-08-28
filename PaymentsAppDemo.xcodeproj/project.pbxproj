@@ -333,11 +333,11 @@
 		C3AF57C724F3681C0033499E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C3AF57F624F4B02F0033499E /* Alert */,
-				C3AF57E724F470BE0033499E /* Success */,
+				C3435B9224F884FF00793267 /* BaseViewController.swift */,
 				C3AF57C124F365DD0033499E /* Amount */,
 				C3AF57C224F365F90033499E /* Payments */,
-				C3435B9224F884FF00793267 /* BaseViewController.swift */,
+				C3AF57E724F470BE0033499E /* Success */,
+				C3AF57F624F4B02F0033499E /* Alert */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

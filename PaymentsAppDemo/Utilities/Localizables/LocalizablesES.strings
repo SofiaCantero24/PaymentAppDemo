@@ -17,3 +17,4 @@
 "AmountZeroAlertMessage" = "Por favor ingresa un monto mayor a 0.";
 "PaymentsEmptyTitle" = "Selecciona otra opción";
 "PaymentsEmptyMessage" = "Lo sentimos. Actualmente no hay opciones disponibles para la opción seleccionada.";
+"CloseButtonTitle" = "Cerrar";
