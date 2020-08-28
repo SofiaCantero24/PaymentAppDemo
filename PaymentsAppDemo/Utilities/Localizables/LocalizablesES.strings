@@ -1,0 +1,20 @@
+/* 
+  Localizables.strings
+  PaymentsAppDemo
+
+  Created by Laura Sofia Cantero Hernandez on 8/23/20.
+  Copyright © 2020 Sofia Cantero. All rights reserved.
+*/
+
+"NextStepButtonTitle" = "Siguiente";
+"AmountTitle" = "GEOPAGOS";
+"AmountSubtitle" = "Ingresa el monto a cobrar";
+"PaymentMethodsTitle" = "Métodos de Pago";
+"CardIssuersTitle" = "Banco Emisor";
+"InstallmentsTitle" = "Número de cuotas";
+"SuccessTitle" = "¡Pago Exitoso!";
+"AmountZeroAlertTitle" = "¡Ooooops!";
+"AmountZeroAlertMessage" = "Por favor ingresa un monto mayor a 0.";
+"PaymentsEmptyTitle" = "Selecciona otra opción";
+"PaymentsEmptyMessage" = "Lo sentimos. Actualmente no hay opciones disponibles para la opción seleccionada.";
+"CloseButtonTitle" = "Cerrar";

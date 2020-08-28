@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AmountViewController" customModule="PaymentsAppDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="amountTextField" destination="Piv-6R-YaM" id="TeA-vb-VDd"/>
+                <outlet property="buttonBottomConstraint" destination="HbI-gZ-cJS" id="DtA-eh-esQ"/>
+                <outlet property="nextStepButton" destination="Jcq-7S-sLV" id="2sk-g4-rZI"/>
+                <outlet property="subtitleLabel" destination="VWG-rl-Q7u" id="U0V-fG-2zH"/>
+                <outlet property="titleLabel" destination="shi-Pv-ztP" id="hZs-1j-pMF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gJ-fi-HUM">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GEOPAGOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shi-Pv-ztP">
+                            <rect key="frame" x="114" y="32" width="186" height="42"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa el monto a pagar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWG-rl-Q7u">
+                            <rect key="frame" x="108.5" y="86" width="197.5" height="22.5"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Piv-6R-YaM">
+                            <rect key="frame" x="64" y="208.5" width="286" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcq-7S-sLV">
+                            <rect key="frame" x="16" y="758" width="382" height="44"/>
+                            <color key="backgroundColor" red="0.33333333329999998" green="0.72941176470000002" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="EUG-JD-m4Q"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                            <state key="normal" title="Siguiente"/>
+                            <connections>
+                                <action selector="nextButtonTapped:" destination="-1" eventType="touchUpInside" id="x6B-fk-H0s"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Piv-6R-YaM" firstAttribute="leading" secondItem="5gJ-fi-HUM" secondAttribute="leading" constant="64" id="06b-sV-MXB"/>
+                        <constraint firstItem="Piv-6R-YaM" firstAttribute="centerX" secondItem="5gJ-fi-HUM" secondAttribute="centerX" id="7a5-Y9-WpE"/>
+                        <constraint firstAttribute="bottom" secondItem="Jcq-7S-sLV" secondAttribute="bottom" constant="16" id="HbI-gZ-cJS"/>
+                        <constraint firstAttribute="trailing" secondItem="Jcq-7S-sLV" secondAttribute="trailing" constant="16" id="NJk-th-3rZ"/>
+                        <constraint firstItem="VWG-rl-Q7u" firstAttribute="top" secondItem="shi-Pv-ztP" secondAttribute="bottom" constant="12" id="TDT-jz-ELU"/>
+                        <constraint firstItem="shi-Pv-ztP" firstAttribute="top" secondItem="5gJ-fi-HUM" secondAttribute="top" constant="32" id="beB-H5-9sm"/>
+                        <constraint firstItem="Jcq-7S-sLV" firstAttribute="leading" secondItem="5gJ-fi-HUM" secondAttribute="leading" constant="16" id="eha-er-klE"/>
+                        <constraint firstItem="Piv-6R-YaM" firstAttribute="top" secondItem="VWG-rl-Q7u" secondAttribute="bottom" constant="100" id="mD3-Uv-RGJ"/>
+                        <constraint firstAttribute="trailing" secondItem="Piv-6R-YaM" secondAttribute="trailing" constant="64" id="owF-7e-khu"/>
+                        <constraint firstItem="VWG-rl-Q7u" firstAttribute="centerX" secondItem="5gJ-fi-HUM" secondAttribute="centerX" id="zDg-H6-XVa"/>
+                        <constraint firstItem="shi-Pv-ztP" firstAttribute="centerX" secondItem="5gJ-fi-HUM" secondAttribute="centerX" id="zx1-fw-fAr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="5gJ-fi-HUM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aQx-nT-60Q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5gJ-fi-HUM" secondAttribute="bottom" id="kg6-WZ-dsK"/>
+                <constraint firstItem="5gJ-fi-HUM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xgK-Sv-zqN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5gJ-fi-HUM" secondAttribute="trailing" id="zLC-Rv-0z6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="82"/>
+        </view>
+    </objects>
+</document>

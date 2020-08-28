@@ -1,0 +1,11 @@
+/* 
+  LocalizablesEN.strings
+  PaymentsAppDemo
+
+  Created by Laura Sofia Cantero Hernandez on 8/23/20.
+  Copyright © 2020 Sofia Cantero. All rights reserved.
+*/
+
+"NextStepButtonTitle" = "Next";
+"AmountTitle" = "GEOPAGOS";
+"AmountSubtitle" = "Ingresa el monto a cobrar";
