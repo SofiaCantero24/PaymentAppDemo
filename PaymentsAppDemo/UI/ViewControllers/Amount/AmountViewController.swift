@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AmountViewController: UIViewController {
+class AmountViewController: BaseViewController {
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
             titleLabel.text = Localizables.amountTitle
@@ -50,7 +50,12 @@ class AmountViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupGestureRecognizer()
         setupKeyboardNotifications()
-        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        amountTextField.text = nil
     }
 
     // MARK: - Private
@@ -103,9 +108,16 @@ class AmountViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        guard let textFieldText = amountTextField.text else { return }
+        view.endEditing(true)
+        guard let textFieldText = amountTextField.text, viewModel.stringToFloat(textFieldText) > 0 else {
+            showAlertMessage(title: Localizables.amountZeroAlertTitle,
+                             message: Localizables.amountZeroAlertMessage)
+            return
+        }
         let paymentsViewModel = PaymentsViewModel(amount: viewModel.stringToFloat(textFieldText))
         let paymentsViewController = PaymentsViewController(viewModel: paymentsViewModel)
-        navigationController?.pushViewController(paymentsViewController, animated: true)
+        let navigationController = UINavigationController(rootViewController: paymentsViewController)
+
+        present(navigationController, animated: true, completion: nil)
     }
 }

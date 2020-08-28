@@ -8,23 +8,6 @@
 
 import Foundation
 
-enum PaymentsSteps: Int {
-    case paymentMethods
-    case cardIssuers
-    case installments
-
-    var title: String {
-        switch self {
-        case .paymentMethods:
-            return Localizables.paymentMethodsTitle
-        case .cardIssuers:
-            return Localizables.cardIssuersTitle
-        case .installments:
-            return Localizables.installmentsTitle
-        }
-    }
-}
-
 class PaymentsViewModel {
     var paymentMethods = [PaymentMethod]()
     var cardIssuers = [CardIssuer]()
@@ -74,24 +57,24 @@ class PaymentsViewModel {
         }
     }
 
-    func didSelectRowAt(index: IndexPath, completion: @escaping (Bool) -> Void) {
+    func didSelectRowAt(index: IndexPath, completion: @escaping (_ lastStep: Bool, _ isEmpty: Bool) -> Void) {
         switch currentStep {
         case .paymentMethods:
             guard let paymentMethodId = paymentMethods[safe: index.row]?.id else { return }
             self.paymentMethodId = paymentMethodId
             getCardIssuers(paymentMethodId: paymentMethodId) {
-                self.currentStep = .cardIssuers
-                completion(false)
+                if !self.cardIssuers.isEmpty { self.currentStep = .cardIssuers }
+                completion(false, self.cardIssuers.isEmpty)
             }
         case .cardIssuers:
             guard let cardIssuerId = cardIssuers[safe: index.row]?.id else { return }
             self.cardIssuerId = cardIssuerId
             getInstallments(paymentMethodId: paymentMethodId, issuerId: cardIssuerId) {
-                self.currentStep = .installments
-                completion(false)
+                if !self.installments.isEmpty { self.currentStep = .installments }
+                completion(false, self.installments.isEmpty)
             }
         case .installments:
-            completion(true)
+            completion(true, false)
             break
         }
     }

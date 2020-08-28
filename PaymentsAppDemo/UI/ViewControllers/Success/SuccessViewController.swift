@@ -9,7 +9,7 @@
 import UIKit
 import Lottie
 
-class SuccessViewController: UIViewController {
+class SuccessViewController: BaseViewController {
     @IBOutlet weak var animationView: AnimationView! {
         didSet {
             animationView.contentMode = .scaleAspectFit
@@ -17,16 +17,20 @@ class SuccessViewController: UIViewController {
             animationView.animationSpeed = 1
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var successLabel: UILabel! {
+        didSet {
+            successLabel.text = Localizables.successTitle
+            successLabel.textColor = .darkGray
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         animationView.play()
+    }
+    @IBAction func closeButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }

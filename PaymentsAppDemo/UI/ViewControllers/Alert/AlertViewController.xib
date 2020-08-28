@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertViewController" customModule="PaymentsAppDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="alertMessageLabel" destination="Bgp-Fj-mbm" id="lIy-zr-cM4"/>
+                <outlet property="alertTitleLabel" destination="GQc-zc-9gH" id="sms-5i-6Mt"/>
+                <outlet property="alertView" destination="NCz-Hq-kfu" id="sJX-vl-4B9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="342"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCz-Hq-kfu">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="342"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ooops! Algo anda mal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQc-zc-9gH">
+                            <rect key="frame" x="16" y="32" width="242.5" height="30"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor ingresa un valor mayor a 0 j   hvhvhv hhgfyf fyfytf y" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgp-Fj-mbm">
+                            <rect key="frame" x="16" y="94" width="382" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Bgp-Fj-mbm" firstAttribute="leading" secondItem="NCz-Hq-kfu" secondAttribute="leading" constant="16" id="4fT-Mk-KfO"/>
+                        <constraint firstItem="GQc-zc-9gH" firstAttribute="top" secondItem="NCz-Hq-kfu" secondAttribute="top" constant="32" id="Jwe-5c-Ot1"/>
+                        <constraint firstItem="Bgp-Fj-mbm" firstAttribute="top" secondItem="GQc-zc-9gH" secondAttribute="bottom" constant="32" id="KDY-4R-gZE"/>
+                        <constraint firstAttribute="trailing" secondItem="Bgp-Fj-mbm" secondAttribute="trailing" constant="16" id="Y3L-Uc-Y4u"/>
+                        <constraint firstItem="GQc-zc-9gH" firstAttribute="leading" secondItem="NCz-Hq-kfu" secondAttribute="leading" constant="16" id="n3y-7t-aWa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="NCz-Hq-kfu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AYS-8r-eJu"/>
+                <constraint firstItem="NCz-Hq-kfu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bXz-gl-Jg1"/>
+                <constraint firstItem="NCz-Hq-kfu" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jAU-Dg-AOi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NCz-Hq-kfu" secondAttribute="bottom" id="lR9-EZ-Tks"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-69.642857142857139"/>
+        </view>
+    </objects>
+</document>
