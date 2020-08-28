@@ -12,7 +12,6 @@
                 <outlet property="closeButton" destination="d3d-yW-57q" id="ylC-PF-tie"/>
                 <outlet property="paymentTableView" destination="52j-29-gw1" id="Kat-eJ-heT"/>
                 <outlet property="paymentTitleLabel" destination="spU-7X-P8y" id="tf4-Jq-NxO"/>
-                <outlet property="stepsContainerView" destination="aKR-x8-iFm" id="mxn-et-t0I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -36,21 +35,14 @@
                                 <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="fhf-E3-Ec5"/>
                             </connections>
                         </button>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKR-x8-iFm">
-                            <rect key="frame" x="16" y="92" width="382" height="4"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="4" id="qdU-3s-xKs"/>
-                            </constraints>
-                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Métodos de pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spU-7X-P8y">
-                            <rect key="frame" x="16" y="112" width="188.5" height="30"/>
+                            <rect key="frame" x="16" y="92" width="188.5" height="30"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="52j-29-gw1">
-                            <rect key="frame" x="0.0" y="158" width="414" height="660"/>
+                            <rect key="frame" x="0.0" y="138" width="414" height="680"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3d-yW-57q">
@@ -66,19 +58,16 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="spU-7X-P8y" firstAttribute="top" secondItem="aKR-x8-iFm" secondAttribute="bottom" constant="16" id="61I-Yu-YHE"/>
                         <constraint firstItem="gAb-PV-Niw" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="Bo2-4B-LkV"/>
                         <constraint firstItem="spU-7X-P8y" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="OpK-jE-0Eo"/>
                         <constraint firstAttribute="trailing" secondItem="d3d-yW-57q" secondAttribute="trailing" constant="16" id="QbL-qp-pWn"/>
+                        <constraint firstItem="spU-7X-P8y" firstAttribute="top" secondItem="gAb-PV-Niw" secondAttribute="bottom" constant="32" id="ULa-pp-6xc"/>
                         <constraint firstItem="52j-29-gw1" firstAttribute="top" secondItem="spU-7X-P8y" secondAttribute="bottom" constant="16" id="W2s-op-hvr"/>
-                        <constraint firstAttribute="trailing" secondItem="aKR-x8-iFm" secondAttribute="trailing" constant="16" id="XbF-CZ-mL4"/>
                         <constraint firstAttribute="bottom" secondItem="52j-29-gw1" secondAttribute="bottom" id="Z2M-fP-0bQ"/>
                         <constraint firstItem="spU-7X-P8y" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="gcN-dQ-A9V"/>
                         <constraint firstAttribute="trailing" secondItem="52j-29-gw1" secondAttribute="trailing" id="poC-RQ-PqU"/>
                         <constraint firstItem="52j-29-gw1" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" id="sCk-pF-pIG"/>
                         <constraint firstItem="gAb-PV-Niw" firstAttribute="top" secondItem="bAw-MU-WbK" secondAttribute="top" constant="16" id="sqd-VB-DSI"/>
-                        <constraint firstItem="aKR-x8-iFm" firstAttribute="top" secondItem="gAb-PV-Niw" secondAttribute="bottom" constant="32" id="tsC-EW-jSJ"/>
-                        <constraint firstItem="aKR-x8-iFm" firstAttribute="leading" secondItem="bAw-MU-WbK" secondAttribute="leading" constant="16" id="vh9-f8-7pI"/>
                         <constraint firstItem="d3d-yW-57q" firstAttribute="centerY" secondItem="gAb-PV-Niw" secondAttribute="centerY" id="wXe-48-dcp"/>
                     </constraints>
                 </view>

@@ -53,7 +53,26 @@ extension PaymentsAPI: TargetType {
     }
 
     public var sampleData: Data {
-      return Data()
+        switch self {
+        case .paymentMethods:
+            guard let url = Bundle.main.url(forResource: "PaymentMethods", withExtension: "json"),
+                let data = try? Data(contentsOf: url) else {
+                    return Data()
+            }
+            return data
+        case .cardIssuers:
+            guard let url = Bundle.main.url(forResource: "CardIssuers", withExtension: "json"),
+                let data = try? Data(contentsOf: url) else {
+                    return Data()
+            }
+            return data
+        case .installments:
+            guard let url = Bundle.main.url(forResource: "Installments", withExtension: "json"),
+                let data = try? Data(contentsOf: url) else {
+                    return Data()
+            }
+            return data
+        }
     }
 
     public var task: Task {

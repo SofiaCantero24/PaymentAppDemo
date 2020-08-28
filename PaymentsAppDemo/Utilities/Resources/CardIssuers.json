@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1087",
+        "name": "Scotiabank",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/1087.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/1087.gif",
+        "processing_mode": "aggregator",
+        "merchant_account_id": null
+    },
+    {
+        "id": "1083",
+        "name": "Oca",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/visa.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/visa.gif",
+        "processing_mode": "aggregator",
+        "merchant_account_id": null
+    },
+    {
+        "id": "2036",
+        "name": "Tarjetas Prepagas",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/2036.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/2036.gif",
+        "processing_mode": "aggregator",
+        "merchant_account_id": null
+    },
+    {
+        "id": "12387",
+        "name": "Santander",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/12387.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/12387.gif",
+        "processing_mode": "aggregator",
+        "merchant_account_id": null
+    },
+    {
+        "id": "12402",
+        "name": "Anda Alimentación",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/12402.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/12402.gif",
+        "processing_mode": "aggregator",
+        "merchant_account_id": null
+    },
+    {
+        "id": "12403",
+        "name": "Itaú Alimentación",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/12403.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/12403.gif",
+        "processing_mode": "aggregator",
+        "merchant_account_id": null
+    },
+    {
+        "id": "1084",
+        "name": "Otro",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/visa.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/visa.gif",
+        "processing_mode": "aggregator",
+        "merchant_account_id": null
+    }
+]

@@ -1,0 +1,33 @@
+[
+    {
+        "payment_method_id": "visa",
+        "payment_type_id": "credit_card",
+        "issuer": {
+            "id": "1087",
+            "name": "Scotiabank",
+            "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/1087.gif",
+            "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/1087.gif"
+        },
+        "processing_mode": "aggregator",
+        "merchant_account_id": null,
+        "payer_costs": [
+            {
+                "installments": 1,
+                "installment_rate": 0,
+                "discount_rate": 0,
+                "reimbursement_rate": null,
+                "labels": [],
+                "installment_rate_collector": [
+                    "MERCADOPAGO"
+                ],
+                "min_allowed_amount": 15,
+                "max_allowed_amount": 300000,
+                "recommended_message": "1 cuota de $ 5.000,00 ($ 5.000,00)",
+                "installment_amount": 5000,
+                "total_amount": 5000,
+                "payment_method_option_id": "1.AQokMDdkODA2NGItZGY0Zi00M2E4LWFjNTktZTFlYzQ1NzZiNGFlELa1idPCLg"
+            }
+        ],
+        "agreements": null
+    }
+]

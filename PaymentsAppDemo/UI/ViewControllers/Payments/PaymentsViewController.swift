@@ -14,19 +14,12 @@ struct PaymentInfo {
 }
 
 class PaymentsViewController: BaseViewController {
+    @IBOutlet weak private var paymentTitleLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton! {
         didSet {
             closeButton.setTitle(Localizables.closeButtonTitle, for: .normal)
         }
     }
-    @IBOutlet weak private var stepsContainerView: UIView! {
-        didSet {
-//            let stepView: StepsUIView = StepsUIView.loadFirstSubViewFromNib() as! StepsUIView
-//            stepsContainerView.addSubview(stepView)
-//            stepView.frame = stepsContainerView.bounds
-        }
-    }
-    @IBOutlet weak private var paymentTitleLabel: UILabel!
     @IBOutlet weak private var paymentTableView: UITableView! {
         didSet {
             paymentTableView.delegate = self
